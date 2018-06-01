@@ -10,6 +10,7 @@ import { Post } from '../../models/post';
 export class HomeComponent implements OnInit {
   markdown = '';
   title = '';
+  loading = true;
 
   constructor() { }
 
@@ -18,19 +19,11 @@ export class HomeComponent implements OnInit {
     const text = await file.text();
     const content = text.trim();
     this.parseFrontMatter(content);
-    // this.stripYaml(text);
   }
   parseFrontMatter (content: string) {
     const frontMatter: Post = matter.loadFront(content);
     this.title = frontMatter.title;
     this.markdown = frontMatter.__content;
+    this.loading = false;
   }
-
-  stripYaml (content: string) {
-    if (content.startsWith('---')) {
-      const endingTagPos = content.indexOf('---', 4);
-      this.markdown = content.substring(endingTagPos + 3).trim();
-    }
-  }
-
 }
