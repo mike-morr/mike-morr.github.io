@@ -1,3 +1,9 @@
+---
+author: Mike Morrison
+created: 6/1/2018
+title: Home Page
+---
+
 # Random Thoughts #
 
 This blog is mainly for dumping my thoughts on different technologies and documenting things that I believe need to be documented.
