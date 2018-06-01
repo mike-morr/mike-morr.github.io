@@ -13,3 +13,10 @@ Things that interest me right now:
 * JavaScript / TypeScript
 * React
 * SharePoint Online
+
+Deploy command:
+
+```bash
+ng build --prod;
+ngh --branch master --dir dist/blog
+```
