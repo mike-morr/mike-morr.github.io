@@ -4,11 +4,12 @@ This blog is mainly for dumping my thoughts on different technologies and docume
 
 ---
 
-Some of the content you can expect to see:
+Things that interest me right now:
 
 * Angular
-* React
 * C#
+* DotNet Core
 * F#
 * JavaScript / TypeScript
+* React
 * SharePoint Online
