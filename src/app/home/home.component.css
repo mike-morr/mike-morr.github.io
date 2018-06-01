@@ -1,0 +1,11 @@
+.container {
+  margin: 20px 15px;
+}
+
+a {
+  color: coral;
+}
+
+a:visited {
+  color: coral;
+}
