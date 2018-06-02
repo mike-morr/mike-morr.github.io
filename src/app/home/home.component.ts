@@ -15,11 +15,12 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   async ngOnInit () {
-    const file = await fetch('/assets/home.md');
+    const file = await fetch('/_posts/Home.md');
     const text = await file.text();
     const content = text.trim();
     this.parseFrontMatter(content);
   }
+
   parseFrontMatter (content: string) {
     const frontMatter: Post = matter.loadFront(content);
     this.title = frontMatter.title;

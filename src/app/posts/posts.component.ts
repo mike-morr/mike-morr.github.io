@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../../models/post';
+import * as matter from 'yaml-front-matter';
 
 @Component({
   selector: 'blog-posts',
@@ -6,10 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+  postTitles = ['Home', 'Home', 'Home', 'Home', 'Home'];
+  posts: Post[] = [];
+  loading = true;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit () {
+    this.postTitles.map(async p => {
+      const postUrl = `/_posts/${p}.md`;
+      const response = await fetch(postUrl);
+      const text = await response.text();
+      const content = text.trim();
+      const frontMatter: Post = matter.loadFront(content);
+
+      this.posts.push({
+        author: frontMatter.author,
+        title: frontMatter.title,
+        created: frontMatter.created,
+        __content: frontMatter.__content
+      });
+    });
+
+    this.loading = false;
   }
+
+
 
 }
