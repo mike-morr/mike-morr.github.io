@@ -5,7 +5,7 @@ title: Home Page for Blog
 ---
 
 # Random Thoughts #
-
+Oops!
 This blog is mainly for dumping my thoughts on different technologies.  Mostly around development.
 
 ---
