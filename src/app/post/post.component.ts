@@ -17,6 +17,7 @@ export class PostComponent implements OnInit {
   markdown = '';
   title = '';
   loading = true;
+  author = '';
 
   constructor(private route: ActivatedRoute) { }
 
@@ -36,6 +37,7 @@ export class PostComponent implements OnInit {
   parseFrontMatter (content: string) {
     const frontMatter: Post = matter.loadFront(content);
     this.title = frontMatter.title;
+    this.author = frontMatter.author;
     this.created = frontMatter.created;
     this.markdown = frontMatter.__content;
     this.loading = false;

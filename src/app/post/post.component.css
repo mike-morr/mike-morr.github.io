@@ -14,3 +14,13 @@ a:visited {
   text-decoration: none;
   color: coral;
 }
+
+.header {
+  font-size: large;
+  font-weight: bold;
+}
+
+.byLine {
+  font-size: small;
+  margin-bottom: 16px;
+}
