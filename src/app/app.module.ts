@@ -21,13 +21,15 @@ import { HomeComponent } from './home/home.component';
 import { NgxMdModule } from 'ngx-md';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PostsComponent } from './posts/posts.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    PostsComponent
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

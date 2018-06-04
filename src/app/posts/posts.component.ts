@@ -8,7 +8,7 @@ import * as matter from 'yaml-front-matter';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  postTitles = ['Home', 'Home', 'Home', 'Home', 'Home'];
+  postTitles = ['Home', 'Angular-6-Router-How-To-Get-Route-Parameters'];
   posts: Post[] = [];
   loading = true;
 
@@ -26,6 +26,7 @@ export class PostsComponent implements OnInit {
         author: frontMatter.author,
         title: frontMatter.title,
         created: frontMatter.created,
+        postUrl: `/post/${p}`,
         __content: frontMatter.__content
       });
     });

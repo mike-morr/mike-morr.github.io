@@ -3,7 +3,6 @@ author: Mike Morrison
 created: 6/1/2018
 title: Home Page for Blog and a really long blog post title for something interesting!
 ---
-
 # Random Thoughts #
 
 This blog is mainly for dumping my thoughts on different technologies.  Mostly around development.
@@ -23,17 +22,12 @@ Things that interest me:
 
 Deploy command:
 
-```bash
-ng build --prod;
-ngh --branch master --dir dist/blog
-```
-
 PowerShell with syntax highlighting:
 
 ```powershell
 
 $filePath = "./DummyFile.txt"
-$siteUrl = "https://devtenant.sharepoint.com/sites/teamtest2"
+$siteUrl = "https://path.to.sharepoint/sites/your-team-site"
 $docLib = "Documents"
 
 Add-Type -Path .\OnlineClient\Microsoft.SharePoint.Client.dll -ErrorAction Stop
