@@ -8,7 +8,7 @@ import * as matter from 'yaml-front-matter';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  postTitles = ['Home', 'Angular-6-Router-How-To-Get-Route-Parameters'];
+  postTitles = ['Angular-6-Router-How-To-Get-Route-Parameters'];
   posts: Post[] = [];
   loading = true;
 
