@@ -9,7 +9,7 @@ from the ParamMap.  After a lot of trial and error I finally was able to figure 
 I am posting the code here so I can reference it in the future to avoid the pain of trying to figure
 it out again.
 
-First we need to import the right operator from RxJs:
+First we need to import the right operators from RxJs:
 
 ```typescript
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -25,9 +25,13 @@ async ngOnInit () {
     switchMap((params: ParamMap) =>
       of(params.get('postName'))
     )
-  ).subscribe(d => this.postName = d);
+  ).subscribe(d => {
+    this.postName = d;
+    // Other processing here, this is important.
+    // ngOnInit only runs once so it is important to put processing code inside the subscribe
+  });
 }
 ```
 
-The above code creates an observable of the route parameter and then we subscribe to the observable
+The above code creates an observable ```of``` the route parameter and then we subscribe to the observable
 so that we can set the ```postName``` property.
