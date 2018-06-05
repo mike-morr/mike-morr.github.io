@@ -11,6 +11,11 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-powershell';
 import 'prismjs/components/prism-bash';
 
+// Import autotrack plugins for Google Analytics.
+import 'autotrack/lib/plugins/event-tracker';
+import 'autotrack/lib/plugins/outbound-link-tracker';
+import 'autotrack/lib/plugins/url-change-tracker';
+
 if (environment.production) {
   enableProdMode();
 }
