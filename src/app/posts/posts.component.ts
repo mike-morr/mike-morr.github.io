@@ -8,7 +8,7 @@ import * as matter from 'yaml-front-matter';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  postTitles = ['Angular-6-Router-How-To-Get-Route-Parameters', 'About', 'Home'];
+  postTitles = ['Angular-6-Router-How-To-Get-Route-Parameters'];
   posts: Post[] = [];
   loading = true;
 
@@ -30,7 +30,7 @@ export class PostsComponent implements OnInit {
         __content: frontMatter.__content
       });
 
-      this.posts = this.posts.sort((a, b) => a.created.getTime() - b.created.getTime());
+      this.posts = this.posts.sort((a, b) => b.created.getTime() - a.created.getTime());
     });
 
     this.loading = false;
