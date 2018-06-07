@@ -2,7 +2,12 @@
   margin: 15px 30px;
   max-width: 960px;
   min-width: 450px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  flex-basis: 80%;
 }
 
 a {

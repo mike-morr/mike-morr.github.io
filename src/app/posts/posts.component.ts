@@ -29,6 +29,8 @@ export class PostsComponent implements OnInit {
         postUrl: `/post/${p}`,
         __content: frontMatter.__content
       });
+
+      this.posts = this.posts.sort((a, b) => a.created.getTime() - b.created.getTime());
     });
 
     this.loading = false;
