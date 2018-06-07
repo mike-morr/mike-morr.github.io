@@ -1,4 +1,9 @@
 .post-card {
-  width: 450px;
+  flex-basis: 80%;
   margin: 12px 0;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
 }

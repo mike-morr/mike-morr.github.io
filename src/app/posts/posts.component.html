@@ -1,15 +1,17 @@
-<section style="display: inline-block;">
-  <div *ngIf="loading">
-    <mat-spinner></mat-spinner>
-  </div>
-  <div *ngFor="let post of posts">
+<div *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>
+<section class="main-section">
+  <div>
+    <div *ngFor="let post of posts">
 
-    <mat-card class="post-card">
-      <a [routerLink]="post.postUrl">
-        <h3>{{ post.title }}</h3>
-      </a>
-      <p>Created On {{ post.created }}</p>
-    </mat-card>
+      <mat-card class="post-card">
+        <a [routerLink]="post.postUrl">
+          <h3>{{ post.title }}</h3>
+        </a>
+        <p>Created On {{ post.created }}</p>
+      </mat-card>
 
+    </div>
   </div>
 </section>
